@@ -1,8 +1,5 @@
-/* src/components/CardSection.css */
-
 .card-section {
     text-align: left;
-    /* Alinea el título a la izquierda */
 }
 
 h1 {
@@ -51,7 +48,6 @@ h1 {
 
 .vote-button {
     background-color: #4caf50;
-    /* Color verde */
     color: white;
     border: none;
     padding: 8px 16px;

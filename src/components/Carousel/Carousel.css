@@ -1,7 +1,5 @@
-/* src/components/Carousel.css */
 .carousel-container {
     max-width: 1024px;
-    /* Ajusta el ancho del carrusel según tus necesidades */
     margin: 0 auto;
     padding: 20px;
 }
@@ -14,5 +12,4 @@ img {
     width: 50%;
     height: auto;
     border-radius: 6px;
-    /* Opcional: Agrega bordes redondeados a la imagen */
 }
