@@ -1,0 +1,73 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #0e4403;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #058344;
+}
+
+body {
+  margin: 0;
+ 
+}
+
+.menu-iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0px;
+
+}
+
+.menu-iconos li {
+  text-align: center;
+  /* Centra el texto debajo de los iconos */
+}
+
+.menu-iconos a {
+  text-decoration: none;
+  /* Elimina el subrayado de los enlaces */
+}
+
+.menu-iconos span {
+  display: block;
+  /* Hace que las palabras estén en una nueva línea */
+}
+
+.menu-iconos i,
+.menu-iconos span {
+  margin-top: 8px;
+  /* Espacio entre el icono y el texto */
+}
+
+.menu-iconos i {
+  font-size: 2rem;
+  /* Establece un tamaño de fuente base para los iconos */
+}
+
+.menu-iconos i:hover {
+
+  background-color: transparent;
+  color: var(--negro);
+
+}
