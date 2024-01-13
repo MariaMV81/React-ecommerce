@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container,  Avatar, Button, Tooltip, MenuItem} from '@mui/material';
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container,  Button, Tooltip, MenuItem} from '@mui/material';
 import {Menu as MenuIcon} from '@mui/icons-material';
-
-const pages = ['Products', 'Pricing', 'Blog'];
+import { Fingerprint } from '@mui/icons-material';
+const pages = ['Inicio', 'Productos', 'Sobre Cum Love'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function MenuBar() {
@@ -100,8 +100,8 @@ export default function MenuBar() {
 
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} aria-label="fingerprint" color="success">
+                                <Fingerprint />
                             </IconButton>
                         </Tooltip>
                         <Menu
