@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import AirplanemodeActiveIcon from "@mui/icons-material/AirplanemodeActive";
 import AndroidIcon from "@mui/icons-material/Android";
 import Grid from "@mui/material/Grid";
+import Paper from '@mui/material/Paper';
 
 
 export default function Footer(){
@@ -128,6 +129,17 @@ export default function Footer(){
                             quisquam minima provident, ad magnam saepe impedit voluptatem
                             ratione quas molestias! Nisi.
                         </p>
+                    </Grid>
+                </Grid>
+                <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                        <Paper elevation={3}>Contenido de la primera fila</Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Paper>Contenido de la segunda fila - columna 1</Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Paper>Contenido de la segunda fila - columna 2</Paper>
                     </Grid>
                 </Grid>
             </Container>

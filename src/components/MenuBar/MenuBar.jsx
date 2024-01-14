@@ -1,7 +1,21 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container,  Button, Tooltip, MenuItem} from '@mui/material';
-import {Menu as MenuIcon} from '@mui/icons-material';
+import {
+    AppBar,
+    Box,
+    Toolbar,
+    IconButton,
+    Typography,
+    Menu,
+    Container,
+    Button,
+    Tooltip,
+    MenuItem,
+ 
+} from '@mui/material';
+import { Menu as MenuIcon } from '@mui/icons-material';
 import { Fingerprint } from '@mui/icons-material';
+import SearchIcon from '@mui/icons-material/Search';
+
 const pages = ['Inicio', 'Productos', 'Sobre Cum Love'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -12,6 +26,7 @@ export default function MenuBar() {
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
+
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
     };
@@ -25,13 +40,16 @@ export default function MenuBar() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    
-                  
-
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            display: { xs: 'flex', md: 'none' },
+                            alignItems: 'center',
+                        }}
+                    >
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -62,12 +80,14 @@ export default function MenuBar() {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                    <Typography textAlign="center" color="black">
+                                        {page}
+                                    </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
-                    
+
                     <Typography
                         variant="h5"
                         noWrap
@@ -80,26 +100,37 @@ export default function MenuBar() {
                             fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
-                            color: 'inherit',
+                            color: 'black',
                             textDecoration: 'none',
                         }}
                     >
                         LOGO
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            display: { xs: 'none', md: 'flex' },
+                            alignItems: 'center',
+                        }}
+                    >
                         {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
+                            <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'black', display: 'block' }}>
                                 {page}
                             </Button>
                         ))}
                     </Box>
 
-                    <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
+                    <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
+                        {/* Barra de búsqueda */}
+                        <Tooltip title="Buscar">
+                            <IconButton sx={{ p: 0, ml: 2 }} aria-label="search" color="inherit">
+                                <SearchIcon />
+                            </IconButton>
+                        </Tooltip>
+
+                        {/* Icono de huella dactilar y menú de usuario */}
+                        <Tooltip title="Usuario Logueado">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} aria-label="fingerprint" color="success">
                                 <Fingerprint />
                             </IconButton>
@@ -122,7 +153,9 @@ export default function MenuBar() {
                         >
                             {settings.map((setting) => (
                                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
+                                    <Typography textAlign="center" color="black">
+                                        {setting}
+                                    </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
